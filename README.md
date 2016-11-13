@@ -38,9 +38,11 @@ Mink's main focus is to assist with building and transitioning between the build
 
 To contribute, please check out [what we are missing!](https://github.com/ev1stensberg/mink/issues) There is still much left in order for Mink to be fully functional, so Pull Requests are warmly welcome.
 
-#Roadmap and Decisions 
+#Roadmap
 
-Ipsum something.
+ 1. First version publish
+ 2. Integrate Refactoring
+ 3. Integrate options which will let the user only build a webpack configuration
 
 #License
 
