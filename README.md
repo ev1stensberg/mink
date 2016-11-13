@@ -1,5 +1,5 @@
 # Mink
-
+[![Build Status](https://travis-ci.org/ev1stensberg/mink.svg?branch=master)](https://travis-ci.org/ev1stensberg/mink)
 #Installation ( Not published yet ) 
 
 
