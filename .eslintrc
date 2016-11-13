@@ -1,0 +1,24 @@
+{
+  "extends": ["eslint:recommended", "google"],
+  "rules": {
+      "no-undef": 0,
+       "no-console": 0,
+       "require-jsdoc": 0,
+       "no-multi-spaces": 0,
+       "max-len": 1,
+       "quote-props": 0,
+       "camelcase": 0,
+       "brace-style": 1,
+       "no-irregular-whitespace": 1,
+       "comma-dangle": 0,
+       "eol-last": 0,
+       "object-curly-spacing": 0,
+       "quotes": 1
+  },
+  env: {
+        es6: true
+    },
+     "parserOptions": {
+        "sourceType": "module",
+    }
+}
