@@ -1,8 +1,8 @@
 # Mink
 [![Build Status](https://travis-ci.org/ev1stensberg/mink.svg?branch=master)](https://travis-ci.org/ev1stensberg/mink)
+<hr>
+![](https://thumbs.gfycat.com/RemoteEllipticalCockroach-size_restricted.gif)
 #Installation ( Not published yet ) 
-
-
 `npm install mink -g `
 
 #Technology Stack
