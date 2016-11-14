@@ -20,8 +20,12 @@ if(commander.universialRender) {
   const questions = require(`${__dirname}/lib/utils/observable-questions.js`);
   const validate = require(`${__dirname}/lib/utils/validate-input.js`);
    inquirer.prompt(questions).ui.process.subscribe(
-     (ans) => { validate(ans, require(`${__dirname}/lib/utils/print-files.js`)); },
-     (err) => { console.log('Error: ', err); },
+     (ans) => { 
+       validate(ans, require(`${__dirname}/lib/utils/print-files.js`)); 
+     },
+     (err) => { 
+       console.log('Error: ', err); 
+     },
      () => {
        require(`${__dirname}/lib/utils/npm-install.js`)
      }

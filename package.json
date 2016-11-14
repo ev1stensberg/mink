@@ -5,9 +5,8 @@
   "repository": "https://github.com/ev1stensberg/mink",
   "main": "cli.js",
   "scripts": {
-    "lint": "xo",
     "test": "ava --verbose",
-    "eslint": "eslint ./"
+    "lint": "eslint ./"
   },
   "bin": {
     "mink": "cli.js"
@@ -34,7 +33,6 @@
   },
   "devDependencies": {
     "ava": "^0.16.0",
-    "eslint": "^3.9.0",
-    "xo": "^0.17.0"
+    "eslint": "^3.9.0"
   }
 }

@@ -6,3 +6,7 @@ node_js:
   - "stable"
 
 sudo: true
+
+script:
+  - npm run lint
+  - npm test
