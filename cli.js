@@ -27,7 +27,8 @@ if(commander.universialRender) {
        console.log('Error: ', err); 
      },
      () => {
-       require(`${__dirname}/lib/utils/npm-install.js`)
+       require(`${__dirname}/lib/utils/npm-install.js`);
+       require(`${__dirname}/lib/utils/clear-folders.js`);
      }
    );
 }
