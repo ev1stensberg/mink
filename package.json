@@ -29,7 +29,8 @@
     "lindir": "^1.2.2",
     "mkdirp": "^0.5.1",
     "rx": "^4.1.0",
-    "time-require": "^0.1.2"
+    "time-require": "^0.1.2",
+    "webpack-loaders-json": "^1.0.4"
   },
   "devDependencies": {
     "ava": "^0.16.0",

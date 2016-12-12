@@ -8,13 +8,37 @@ commander.version(pkg.version);
 commander.usage('[options] <source>');
 commander.option('-u  --universial-render', 'Builds an application');
 commander.option('-r  --refactor-application', 'Refactors an application');
+commander.option('-t --transform-version', 'Transforms current webpack version');
 commander.parse(process.argv);
 // integrate with time require later, has to have env vars
 if (debug.enabled) {
   require('time-require');
 }
+if(commander.transformVersion) {
+  console.log("\nWill be implemented soon!\n")
+}
 if(commander.refactorApplication) {
-  console.log('Implemented soon!');
+  const refactorQuestions = 
+  require(`${__dirname}/lib/utils/observable-refactor-questions.js`);
+  let command;
+  const checkFP = require(`${__dirname}/lib/utils/check-file-path.js`);
+
+  inquirer.prompt(refactorQuestions).ui.process.subscribe(
+    (ans) => { 
+      const { name, answer } = ans;
+      if (name === 'ConfigLogic') {
+        checkFP(answer)
+        global.webpackLocation = answer;
+      }
+      if (name !== 'ConfigLogic') command = { [name]: answer.slice(0,2) }
+    },
+    (err) => { 
+      console.log('Error: ', err); 
+    },
+    () => {
+      require(`${__dirname}/lib/utils/validate-choices.js`)(command)
+    }
+  );
 }
 if(commander.universialRender) {
   const questions = require(`${__dirname}/lib/utils/observable-questions.js`);
@@ -28,7 +52,7 @@ if(commander.universialRender) {
      },
      () => {
        require(`${__dirname}/lib/utils/npm-install.js`);
-       require(`${__dirname}/lib/utils/clear-folders.js`);
+       require(`${__dirname}/lib/utils/clear-folders.js`)();
      }
    );
 }
